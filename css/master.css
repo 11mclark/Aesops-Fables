@@ -1,0 +1,110 @@
+/* Ceci est un commentaire en CSS - Les navigateurs ignorent les commentaires.
+De cette manière nous pouvons laisser des messages pour d'autres codeurs et des explications de ce que nous avons fait. */
+
+/* Dans les 4 selectors suivants nous allons travailler sur la navigation de notre page.
+
+Nous découvrons ici la possibilité d'utiliser des selectors composés ex : header ul  Ceci permet, par exemple, de cibler les elements de la liste du header sans affecter ceux du footer.
+ */
+header {
+  background: rgb(41, 37, 75);
+  padding: 3px;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header li {
+  display: inline-block;
+  border: 1px solid #ffffff;
+}
+
+header a {
+  text-decoration: none;
+  color : #ffffff;
+  padding: 20px;
+  display: inline-block;
+}
+
+/* A noter ici :
+1. L'utilisation d'une class sur la div, nous la ciblons ici dans la CSS au moyen d'un point .
+2. l'utilisation de background image et de background size
+3. une hauteur minimal à la div. (pour comprendre ce qu'est une VH : https://css-tricks.com/the-lengths-of-css/)
+*/
+.hero {
+  background: rgb(134,0,0) url('images/intro.jpg') top center no-repeat;
+  justify-content: center;
+  align-items: center;
+min-height: 100vh;
+background-size: cover;
+background-attachment: fixed;
+padding: 20px;
+  color : #fff;
+}
+
+.hero{ background-attachment: fixed;}
+
+
+/* Sur les sections :
+1. Nous utilisons encore une hauteur minimale pour faciliter la lecture et le rythme vertical de la page.
+2. Nous utilsons des classes pour permettre d'aleterner visuellement les sections.
+*/
+section {
+  min-height: 90vh;
+  padding: 42px;
+}
+
+.odd {
+  background: rgb(128,128,128);
+}
+
+.even {
+  background: rgb(192,192,192);
+}
+
+/* Nous souhaitons que les images soient responsives... c'est à dire n'éxcèdent pas une certaine largeur ET se redimensionnent avec leur parent */
+
+.image-block {
+  max-width: 640px;
+  border: 12px solid #000;
+}
+
+.image-block img {
+  width : 100%;
+display:block;
+}
+
+figcaption {font-family: 'EB Garamond', serif;
+font-style: italic;
+
+}
+
+footer {
+  font-family: 'Vollkorn', serif;
+  min-height: 200px;
+  background: #000;
+  color : #fff;
+  line-height: 50px;
+  font-style: italic;
+  text-align: center;
+  list-style-type: none;
+}
+
+@import "https://fonts.googleapis.com/css?family=Crimson+Text|EB+Garamond|Source+Serif+Pro|Vollkorn";
+
+
+/*
+
+// Small devices
+
+// Medium devices (landscape phones, 576px and up)
+@media (min-width: 640px) { ... }
+
+// Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+// Extra large devices
+
+@media (min-width: 1440px) { ... }
+
+*/
